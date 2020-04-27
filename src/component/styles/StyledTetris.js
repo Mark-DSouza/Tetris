@@ -18,7 +18,7 @@ export const StyledTetris = styled.div`
     max-width: 900px;
 
     aside {
-        background-color: red; /* for reference */
+        /* background-color: red; for reference */
         width: 100%;
         max-width: 200px;
         display: block;

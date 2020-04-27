@@ -1,10 +1,11 @@
 import React from 'react';
+import { StyledStartButton } from './styles/StyledStartButton';
 
-function StartButton(props) {
+function StartButton({ callback }) {
     return (
-        <div>
-            Start
-        </div>
+        <StyledStartButton onClick={callback}>
+            Start Game
+        </StyledStartButton>
     )
 }
 
