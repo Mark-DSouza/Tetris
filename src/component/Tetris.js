@@ -40,11 +40,14 @@ function Tetris(props) {
     }
 
     const move = ({keyCode}) => {
-        
+
     }
 
     return (
-        <StyledTetrisWrapper>
+        // role="button" otherwise the component won't respond to key presses
+        // tabIndex="0" so that it is the first thing focused when user hits tab
+        <StyledTetrisWrapper role="button" tabIndex="0" onKeyDown={e => move(e)}>
+
             <StyledTetris>
 
             <Stage stage={stage}/>
