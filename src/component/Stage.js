@@ -5,7 +5,6 @@ import Cell from './Cell';
 function Stage({stage}) {
     return (
         <div>
-            Stage
             {stage().map(row => row.map((cell, index) => <Cell key={index} type={cell[0]} />))}
         </div>
     )
