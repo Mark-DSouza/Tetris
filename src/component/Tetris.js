@@ -5,12 +5,18 @@ import Stage from './Stage';
 import Display from './Display';
 import StartButton from './StartButton';
 
+// Styled components
+import {StyledTetrisWrapper} from './styles/StyledTetris';
+
 // Supporting files
 import {createStage} from '../gameHelper';
+import { StyledCell } from "./styles/StyledCell";
 
 function Tetris(props) {
     return (
-        <div>
+        <StyledTetrisWrapper>
+            <div>
+
             Tetris
 
             <Stage stage={createStage}/>
@@ -20,7 +26,9 @@ function Tetris(props) {
                 <StartButton />
             </aside>
 
-        </div>
+            </div>
+        </StyledTetrisWrapper>
+
     )
 }
 
