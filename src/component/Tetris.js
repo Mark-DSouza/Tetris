@@ -20,7 +20,12 @@ function Tetris(props) {
             <Stage stage={createStage()}/>
 
             <aside>
-                <Display />
+                <div>
+                    <Display text={"Score"}/>
+                    <Display text={"Rows"}/>
+                    <Display text={"Level"}/>
+                </div>
+
                 <StartButton />
             </aside>
 
