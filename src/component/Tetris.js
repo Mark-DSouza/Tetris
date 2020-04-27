@@ -24,7 +24,7 @@ function Tetris(props) {
     console.log('re-render');
 
     const movePlayer = dir => {
-
+        
     }
 
     const startGame = () => {
@@ -40,7 +40,17 @@ function Tetris(props) {
     }
 
     const move = ({keyCode}) => {
-
+        if (gameOver) {
+            if (keyCode === 37 || keyCode === 65) {
+                movePlayer(-1);
+            }
+            if (keyCode === 39 || keyCode === 68) {
+                movePlayer(1);
+            }
+            if (keyCode === 40 || keyCode === 83) {
+                dropPlayer();
+            }
+        }
     }
 
     return (
