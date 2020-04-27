@@ -16,8 +16,8 @@ function Tetris(props) {
     return (
         <StyledTetrisWrapper>
             <StyledTetris>
-            
-            <Stage stage={createStage}/>
+
+            <Stage stage={createStage()}/>
 
             <aside>
                 <Display />
