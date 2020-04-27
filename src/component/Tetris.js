@@ -18,7 +18,7 @@ import {createStage} from '../gameHelper';
 function Tetris(props) {
     const [dropTime, setDropTime] = useState(null);
     const [gameOver, setGameOver] = useState(false);
-    const [player, setPlayer] = usePlayer();
+    const [player, updatePlayerPos, resetPlayer] = usePlayer();
     const [stage, setStage] = useStage(player);
 
     console.log('re-render');
@@ -34,7 +34,7 @@ function Tetris(props) {
     }
 
     const drop = () => {
-        updatePlayerPos({ x: dir, y: 0});
+        updatePlayerPos({ x: 0, y: 0, collided: false });
     }
 
     const dropPlayer = () => {
@@ -77,7 +77,7 @@ function Tetris(props) {
                 )}
                 
 
-                <StartButton />
+                <StartButton callback={startGame}/>
             </aside>
 
             </StyledTetris>
