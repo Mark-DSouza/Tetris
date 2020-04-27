@@ -23,6 +23,26 @@ function Tetris(props) {
 
     console.log('re-render');
 
+    const movePlayer = dir => {
+
+    }
+
+    const startGame = () => {
+
+    }
+
+    const drop = () => {
+
+    }
+
+    const dropPlayer = () => {
+
+    }
+
+    const move = ({keyCode}) => {
+        
+    }
+
     return (
         <StyledTetrisWrapper>
             <StyledTetris>
