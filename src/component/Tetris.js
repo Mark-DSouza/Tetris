@@ -19,12 +19,12 @@ function Tetris(props) {
     const [dropTime, setDropTime] = useState(null);
     const [gameOver, setGameOver] = useState(false);
     const [player, updatePlayerPos, resetPlayer] = usePlayer();
-    const [stage, setStage] = useStage(player);
+    const [stage, setStage] = useStage(player, resetPlayer);
 
     console.log('re-render');
 
     const movePlayer = dir => {
-        updatePlayerPos({ x: dir, y: 0});
+        updatePlayerPos({ x: dir, y: 0, collided: false});
     }
 
     const startGame = () => {
@@ -34,7 +34,7 @@ function Tetris(props) {
     }
 
     const drop = () => {
-        updatePlayerPos({ x: 0, y: 0, collided: false });
+        updatePlayerPos({ x: 0, y: 1, collided: false });
     }
 
     const dropPlayer = () => {
@@ -42,7 +42,7 @@ function Tetris(props) {
     }
 
     const move = ({keyCode}) => {
-        if (gameOver) {
+        if (!gameOver) {
             if (keyCode === 37 || keyCode === 65) {
                 movePlayer(-1);
             }
