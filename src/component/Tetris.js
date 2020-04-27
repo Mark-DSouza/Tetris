@@ -24,19 +24,21 @@ function Tetris(props) {
     console.log('re-render');
 
     const movePlayer = dir => {
-        
+        updatePlayerPos({ x: dir, y: 0});
     }
 
     const startGame = () => {
-
+        // Reset everything
+        setStage(createStage());
+        resetPlayer();
     }
 
     const drop = () => {
-
+        updatePlayerPos({ x: dir, y: 0});
     }
 
     const dropPlayer = () => {
-
+        drop();
     }
 
     const move = ({keyCode}) => {
